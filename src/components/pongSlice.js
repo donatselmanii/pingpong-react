@@ -35,6 +35,16 @@ const resumeButton = {
   text: "RESUME",
 };
 
+const randomDirection = () => {
+    let direction = Math.random();
+    if (direction > 0.5) {
+      return -1 * direction;
+    } else {
+      return direction;
+    }
+  };
+  
+
 const startButton = Object.assign({}, resumeButton, {
   text: "START",
 });
