@@ -37,7 +37,7 @@ function Footer() {
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/AboutUs">About Us</Link></li>
-                        <li><Link to="/ContactUs">Game</Link></li>
+                        <li><Link to="/PingPong">Game</Link></li>
                     </ul>
                 </div>
                 <div className={classes.footerContact}>
