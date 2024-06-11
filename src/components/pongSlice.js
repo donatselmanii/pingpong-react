@@ -1,3 +1,5 @@
+import { createSlice } from "@reduxjs/toolkit";
+
 const GAME_WIDTH = 800;
 const GAME_HEIGHT = 700;
 
@@ -203,3 +205,31 @@ export const pongSlice = createSlice({
         },
       },
     });
+
+    export const {
+        startGame,
+        pauseGame,
+        resumeGame,
+        endGame,
+        restartGame,
+        keyPress,
+        keyUp,
+        movePaddleUp,
+        movePaddleDown,
+        moveBall,
+      } = pongSlice.actions;
+      
+      export default pongSlice.reducer;
+
+      export const selectWinner = (state) => state.pong.winner;
+  
+  export const selectStatus = (state) => state.pong.status;
+  
+  export const selectPlayers = (state) => state.pong.players;
+  
+  export const selectConfig = (state) => state.pong.config;
+  
+  export const selectButtons = (state) => state.pong.buttons;
+  
+  export const selectBall = (state) => state.pong.ball;
+  
