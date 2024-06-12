@@ -48,11 +48,11 @@ const randomDirection = () => {
   
 
 const startButton = Object.assign({}, resumeButton, {
-  text: "START",
+  text: "Filloni Lojen",
 });
 
 const restartButton = Object.assign({}, resumeButton, {
-  text: "RESTART",
+  text: "Luaj Perseri",
 });
 
 const BALL_DEFAULTS = {

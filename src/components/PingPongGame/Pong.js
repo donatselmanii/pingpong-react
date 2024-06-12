@@ -130,7 +130,7 @@ export default function Pong(props) {
       {status === "pre-start" && (
         <>
           <Text
-            text="PONG!"
+            text="Luaj PINGPONG!"
             anchor={0.5}
             x={config.width / 2}
             y={50}
@@ -161,8 +161,8 @@ export default function Pong(props) {
             text={
               winner
                 ? winner.position === "left"
-                  ? "Player 1 Wins"
-                  : "Player 2 Wins"
+                  ? "Urime! Fitoj Lojtari me numer 1"
+                  : "Urime! Fitoj Lojtari me numer 2"
                 : ""
             }
             anchor={0.5}

@@ -109,7 +109,7 @@ function Produkti() {
   return (
     <div className="container">
       <NavBar />
-      <Titulli titulli={"Produkti | Sport Store"} />
+      <Titulli titulli={"Produkti"} />
       <div className="produkti">
         <div className="detajet">
           <div className="foto">
