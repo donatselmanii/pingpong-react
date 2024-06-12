@@ -13,6 +13,7 @@ function Footer() {
         email: "info@sportstore.com",
         adresa: "123 Sport Street, Innovation City",
         emriIbiznesit: "Sport Store",
+        vitiFillimit: 2022
     };
 
     return (
@@ -55,7 +56,7 @@ function Footer() {
                 </div>
             </div>
             <div className={classes.copyright}>
-                <FontAwesomeIcon icon={faCopyright} /> {teDhenatBiznesit.emriIbiznesit}
+                <FontAwesomeIcon icon={faCopyright} /> {teDhenatBiznesit.vitiFillimit} - {new Date().getFullYear()} {teDhenatBiznesit.emriIbiznesit}
             </div>
         </footer>
     );

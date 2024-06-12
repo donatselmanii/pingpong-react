@@ -8,7 +8,7 @@ import buttonat from '../Layout/Style/Buton.module.css';
 function ProduktetNeHome({ produkti }) {
   return (
     <div className={classes.artikulli} data-aos="zoom-in">
-      <Link to={`/Produkti/${produkti.produktiId}`}>
+      <Link to={`/Produkti`}>
         <div className={classes.emriFoto}>
           <div className={classes.zbritjaBadge}>
             <p>- 20 %</p>

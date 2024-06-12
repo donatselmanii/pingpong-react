@@ -8,6 +8,7 @@ import AboutUs from "./pages/AboutUs";
 
 import "../src/index.css";
 import "../src/App.css";
+import Produkti from "./pages/Produkti";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/AboutUs" element={<AboutUs />} />
             <Route path="/PingPong" element={<PongApp />} />
+            <Route path="/Produkti" element={<Produkti />} />
           </Routes>
         </BrowserRouter>
       </div>
