@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const GAME_WIDTH = 800;
-const GAME_HEIGHT = 700;
+const GAME_WIDTH = 1000;
+const GAME_HEIGHT = 600;
 
 const PADDLE_WIDTH = 20;
 const PADDLE_HEIGHT = 100;

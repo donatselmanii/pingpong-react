@@ -23,6 +23,9 @@ function NavBar() {
             <li className={classes.navItem}>
               <Link to='/AboutUs'>About Us</Link>
               <span className={classes.line}></span>
+            </li><li className={classes.navItem}>
+              <Link to='/PingPong'>Luaj PingPong</Link>
+              <span className={classes.line}></span>
             </li>
           </div>
         </ul>
@@ -36,6 +39,7 @@ function NavBar() {
             <div className={classes.dropdownContent}>
               <Link to='/'>Home</Link>
               <Link to='/AboutUs'>About Us</Link>
+              <Link to='/PingPong'>Luaj PingPong</Link>
             </div>
           </div>
         </div>

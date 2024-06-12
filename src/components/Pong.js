@@ -35,16 +35,17 @@ export default function Pong(props) {
   };
 
   const onKeyDown = (event) => {
+    event.preventDefault();
     switch (event.code) {
       case "Escape":
         dispatch(pauseGame());
         app.ticker.remove(tick);
         break;
 
-      case "KeyA":
+      case "KeyW":
         dispatch(movePaddleUp("left"));
         break;
-      case "KeyZ": 
+      case "KeyS": 
         dispatch(movePaddleDown("left"));
         break;
       case "ArrowUp":

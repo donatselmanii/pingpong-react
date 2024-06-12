@@ -5,7 +5,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #F7F7F9;
     z-index: 2000;
   }
   

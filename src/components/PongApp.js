@@ -11,6 +11,10 @@ import {
   selectBall,
 } from "./pongSlice";
 import Pong from "./Pong";
+import Footer from "./Layout/Footer";
+import NavBar from "./Layout/Navbar";
+import { Helmet } from "react-helmet";
+import "./Style/pong.css";
 
 export const PongApp = (props) => {
   const dispatch = useDispatch();
@@ -33,15 +37,21 @@ export const PongApp = (props) => {
   };
 
   return (
-    <div className="appContainer">
-      <Stage
-        width={config.width}
-        height={config.height}
-        options={{ autoDensity: true, backgroundColor: config.boardColor }}
-      >
-        <Pong {...pongContainerProps} />
-      </Stage>
-    </div>
+    <>
+      <NavBar />
+      <Helmet>
+        <title>Play Ping Pong | Sport Store</title>
+      </Helmet>
+      <div className="appContainer pongCss">
+        <Stage
+          width={config.width}
+          height={config.height}
+          options={{ autoDensity: true, backgroundColor: config.boardColor }}>
+          <Pong {...pongContainerProps} />
+        </Stage>
+      </div>
+      <Footer />
+    </>
   );
 };
 

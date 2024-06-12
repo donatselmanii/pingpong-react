@@ -39,13 +39,13 @@ function BrandsSlider() {
         className={classes.shkoMajtas}
         ref={(el) => (shkoMajtasRef.current[0] = el)}
       >
-        <img src={`${process.env.PUBLIC_URL}/img/slider/arrow.png`} alt="Arrow Left" />
+        <img src={`${process.env.PUBLIC_URL}/img/arrow.png`} alt="Arrow Left" />
       </button>
       <button
         className={classes.shkoDjathtas}
         ref={(el) => (shkoDjathtasRef.current[0] = el)}
       >
-        <img src={`${process.env.PUBLIC_URL}/img/slider/arrow.png`} alt="Arrow Right" />
+        <img src={`${process.env.PUBLIC_URL}/img/arrow.png`} alt="Arrow Right" />
       </button>
       <div
         className={classes.kornizaEBrendeve}
