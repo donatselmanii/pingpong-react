@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
 import Footer from '../components/Layout/Footer';
 import NavBar from '../components/Layout/Navbar';
 import { Helmet } from 'react-helmet';
@@ -9,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import styles from './Style/AboutUs.module.css';
 
 function AboutUs() {
   const sliderImages = [
@@ -24,92 +24,83 @@ function AboutUs() {
         <title>About Us | Sport Store</title>
       </Helmet>
       <Titulli titulli={'About Us'} />
-      <section id="about-us" className="py-5">
-        <Container>
-          <h2 className="text-center mb-5">About Ping Pong</h2>
-          <p className="lead text-center">
-            Welcome to the world of <strong>Ping Pong</strong>, a sport that combines skill, strategy, and fun!
-          </p>
-          <p className="text-center">
-            Ping Pong, also known as table tennis, is a beloved sport enjoyed by millions around the world. From casual play in basements
-            and garages to competitive matches in professional arenas, ping pong has a rich history and a global following.
-          </p>
-          <h3 className="mt-5">History of Ping Pong</h3>
-          <p>
-            Ping Pong originated in England during the late 19th century as a parlor game for the upper class. Originally played with books
-            as paddles and a golf ball, the game quickly evolved with the introduction of specialized equipment. The name "ping pong" comes
-            from the sound made when the ball strikes the paddle and table.
-          </p>
-          <p>
-            In 1901, John Jaques & Son Ltd, an English sports equipment manufacturer, trademarked the term "Ping Pong." The game continued to
-            grow in popularity, leading to the formation of the International Table Tennis Federation (ITTF) in 1926. The first official
-            World Championships were held in London in 1926.
-          </p>
-          <h3 className="mt-5">Why Play Ping Pong?</h3>
-          <Row>
-            <Col md={6}>
-              <h4>Fun and Accessible</h4>
+      <section id="about-us" className={`${styles.aboutPage} py-5`}>
+        <div className={styles.aboutContainer}>
+          <div className={styles.aboutTxt}>
+            <h2 className={`${styles.title} text-center mb-5`}>About Ping Pong</h2>
+            <div className={styles.txt}>
               <p>
-                Ping Pong is a sport that can be enjoyed by people of all ages and skill levels. Whether you're playing for fun or in a
-                competitive setting, it's a great way to stay active and socialize.
+                Welcome to the world of <strong>Ping Pong</strong>, a sport that combines skill, strategy, and fun!
               </p>
-              <h4>Improves Hand-Eye Coordination</h4>
               <p>
-                The fast-paced nature of ping pong helps enhance hand-eye coordination and reflexes. Players need to react quickly to the
-                ball, making it an excellent way to sharpen your skills.
+                Ping Pong, also known as table tennis, is a beloved sport enjoyed by millions around the world. From casual play in basements
+                and garages to competitive matches in professional arenas, ping pong has a rich history and a global following.
               </p>
-            </Col>
-            <Col md={6}>
-              <h4>Physical and Mental Benefits</h4>
-              <p>
-                Playing ping pong provides a full-body workout, improving cardiovascular health, flexibility, and muscle tone. It also
-                stimulates mental acuity, requiring strategic thinking and quick decision-making.
-              </p>
-              <h4>Social Engagement</h4>
-              <p>
-                Ping Pong is a social sport that brings people together. Whether playing doubles or singles, it encourages interaction,
-                teamwork, and friendly competition.
-              </p>
-            </Col>
-          </Row>
-          <h3 className="mt-5">Ping Pong in Popular Culture</h3>
-          <Row className="mb-4 align-items-center justify-content-center">
-            <Col sm={8}>
-              <Image src={`${process.env.PUBLIC_URL}/img/web/pingpong_logo.jpg`} fluid alt="Ping Pong Logo" />
-            </Col>
-          </Row>
-          <p className="text-center">
-            Ping Pong has made its mark in popular culture, featured in movies, television shows, and even video games. Its universal
-            appeal continues to grow, making it a timeless sport that captivates generations.
-          </p>
-        </Container>
+            </div>
+
+            <h3 className={`${styles.mt5}`}>History of Ping Pong</h3>
+
+            <p className={styles.txt}>
+              Ping Pong originated in England during the late 19th century as a parlor game for the upper class. Originally played with books
+              as paddles and a golf ball, the game quickly evolved with the introduction of specialized equipment. The name "ping pong" comes
+              from the sound made when the ball strikes the paddle and table.
+            </p>
+            <p className={styles.txt}>
+              In 1901, John Jaques & Son Ltd, an English sports equipment manufacturer, trademarked the term "Ping Pong." The game continued to
+              grow in popularity, leading to the formation of the International Table Tennis Federation (ITTF) in 1926. The first official
+              World Championships were held in London in 1926.
+            </p>
+          </div>
+          <div className={styles.sliderContainer}>
+            <h2 className={`${styles.title} mb-5 text-center`}>Ping Pong Highlights</h2>
+            <Swiper
+              spaceBetween={30}
+              centeredSlides={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Autoplay, Pagination, Navigation]}
+              className="mySwiper"
+            >
+              {sliderImages.map((image) => (
+                <SwiperSlide key={image.id}>
+                  <img src={image.src} alt={image.alt} className="d-block w-100" style={{ height: '520px', width: '950px', objectFit: 'cover', margin: '0 auto' }} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
       </section>
-      <section id="pingpong-slider" className="py-5">
-        <Container>
-          <h2 className="text-center mb-5">Ping Pong Highlights</h2>
-          <Swiper
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper"
-            style={{ height: '300px' }} // Set height of the slider
-          >
-            {sliderImages.map((image) => (
-              <SwiperSlide key={image.id}>
-                <img src={image.src} alt={image.alt} className="d-block w-100" style={{ height: '300px', width: '500px', objectFit: 'cover', margin: '0 auto' }} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </Container>
+      <section id="video-player" className={`${styles.aboutPage} py-5`}>
+        <div className={styles.videoContainer}>
+          <video controls className={styles.video}>
+            <source src={`${process.env.PUBLIC_URL}/video/video.mp4`} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </section>
+  <section className={`${styles.aboutPage} py-5`}>
+    <div className={styles.rulesSection}>
+      <h2 className={`${styles.title} mb-5 text-center`}>Rules of Ping Pong</h2>
+      <p>
+        1. The game begins with a serve, where one player hits the ball over the net to the opponent's side of the table.
+      </p>
+      <p>
+        2. The opponent then hits the ball back, and play continues until one player fails to return the ball within the rules.
+      </p>
+      <p>
+        3. Points are scored when the opponent fails to return the ball, or if they hit the ball out of bounds.
+      </p>
+      <p>
+        4. The first player to reach 11 points wins the game, but the game must be won by at least a 2-point margin.
+      </p>
+    </div>
+  </section>
       <Footer />
     </>
   );

@@ -13,6 +13,7 @@ import {
 import Pong from "./Pong";
 
 export const PongApp = (props) => {
+  const dispatch = useDispatch();
 
   const winner = useSelector(selectWinner);
   const players = useSelector(selectPlayers);
@@ -27,7 +28,8 @@ export const PongApp = (props) => {
     buttons,
     players,
     status,
-    winner
+    winner,
+    dispatch,
   };
 
   return (
