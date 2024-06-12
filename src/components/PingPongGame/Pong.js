@@ -67,7 +67,9 @@ export default function Pong(props) {
     return () => {
       window.removeEventListener("keydown", onKeyDown);
       window.removeEventListener("keyup", onKeyUp);
-      app.ticker.remove(tick);
+      if (app && app.ticker) { 
+        app.ticker.remove(tick);
+    }
     };
   });
 

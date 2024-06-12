@@ -9,10 +9,10 @@ import {
   selectConfig,
   selectButtons,
   selectBall,
-} from "./pongSlice";
-import Pong from "./Pong";
-import Footer from "./Layout/Footer";
-import NavBar from "./Layout/Navbar";
+} from "../components/PingPongGame/pongSlice";
+import Pong from "../components/PingPongGame/Pong";
+import Footer from "../components/Layout/Footer";
+import NavBar from "../components/Layout/Navbar";
 import { Helmet } from "react-helmet";
 import "./Style/pong.css";
 
@@ -40,7 +40,7 @@ export const PongApp = (props) => {
     <>
       <NavBar />
       <Helmet>
-        <title>Play Ping Pong | Sport Store</title>
+        <title>Luaj Ping Pong | Sport Store</title>
       </Helmet>
       <div className="appContainer pongCss">
         <Stage

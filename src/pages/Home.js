@@ -124,7 +124,7 @@ function Home() {
             <BrandsSlider />
             <div className={classes.artikujt}>
                 <div className={classes.titulliArtikuj}>
-                    <h1>Latest Products</h1>
+                    <h1>Produktet Tona</h1>
                 </div>
                 {produktet.map((produkti) => {
                     return (

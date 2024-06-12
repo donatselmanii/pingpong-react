@@ -34,7 +34,7 @@ function BrandsSlider() {
 
   return (
     <section className={classes.brandsSlider}>
-      <h2 className={classes.brandsSliderLabel}>Brands</h2>
+      <h2 className={classes.brandsSliderLabel}>Partneret Tane</h2>
       <button
         className={classes.shkoMajtas}
         ref={(el) => (shkoMajtasRef.current[0] = el)}
@@ -54,12 +54,10 @@ function BrandsSlider() {
         {kompanit.map((kompania) => (
           <div className={classes.kartelaEBrendit} key={kompania.kompaniaId} data-aos="zoom-out">
             <div className={classes.logoBrendit}>
-              <Link to={`/Produktet/${kompania.emriKompanis}`}>
                 <img
                   src={`${process.env.PUBLIC_URL}/img/slider/sliderIcons/${kompania.logo}`}
                   alt={kompania.emriKompanis}
                 />
-              </Link>
             </div>
           </div>
         ))}

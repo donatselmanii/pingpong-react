@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import pongReducer from "../components/pongSlice";
+import pongReducer from "../components/PingPongGame/pongSlice";
 
 export function makeStore() {
   return configureStore({

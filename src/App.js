@@ -2,7 +2,7 @@ import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import store from "./app/store";
-import PongApp from "./components/PongApp";
+import PongApp from "./pages/PongApp";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 
